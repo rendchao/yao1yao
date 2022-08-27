@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>计步器改造</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="./js/element-ui@2.4.11/lib/theme-chalk/index.css"/>
+    <script src="js/polyfill.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="./js/element-ui@2.4.11/lib/index.js"></script>
+    <script src="js/member.js"></script>
+    <link rel="stylesheet" href="css/front_index.css"/>
+    <link rel="stylesheet" href="css/style_w.css"/>
+    <style>
+
+        <style>
+
+        * {
+            cursor: initial;
+        }
+
+        .awards,
+        .members {
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .route267{
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            background: 0% 0% / contain no-repeat rgb(255, 255, 255);
+            position: absolute;
+            top: -36px;
+            left: -24px;
+            border: 2px solid rgb(255, 255, 255);
+            transform-origin: 50% 50% 0px;
+
+            transform: rotate(267deg) !important;
+        }
+
+        .route127{
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+            white-space: nowrap;
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            transform: translateX(-50%);
+            text-shadow: rgb(255 141 0) 1px 0px 1px, rgb(255 141 0) 0px 1px 1px, rgb(255 141 0) 0px -1px 1px, rgb(255 141 0) -1px 0px 1px;
+            color: rgb(255, 255, 255);
+            transform: rotate(-127deg) !important;
+        }
+        .bgcould1{
+
+            width: 85%;
+            position: absolute;
+
+            bottom: -65px;
+        }
+        .paomabeijing41{
+            transform: rotate(90deg);
+            height: 223%;
+            width: 115%;
+            left: -60px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div class="yyy3d">
+        <div class="paomabeijing1 okplay"></div>
+
+        <div class="paomabeijing3 okplay">
+            <img class="runItem downplay0"
+                 style="position:absolute; left:10.554614952236005%;top:-40%; width:17.39548836800875rem"
+                 src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:58.94512975298257%;top:-40%; width:19.392529074713412rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:-6.62988618792574%;top:-40%; width:15.678969264749565rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:65.9222284418797%;top:-40%; width:10.410143490363335rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:36.17035410349657%;top:-40%; width:12.500023233491273rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:74.32929225140732%;top:-40%; width:10.59220248575295rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:1.9830652876594002%;top:-40%; width:12.717823238799486rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:81.47249768474333%;top:-40%; width:16.847821852370203rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:12.984082217306103%;top:-40%; width:19.2193102084314rem"
+                src="./img/could.png"><img
+                class="runItem downplay0"
+                style="position:absolute; left:14.45801007843118%;top:-40%; width:19.434387397929513rem"
+                src="./img/could.png"></div>
+
+        <img class="runItem downplay0" style="position:absolute; left:86.03991138793239%;top:-40%; width:19.247140440948556rem" src="./img/could.png">
+
+        <img class="runItem downplay2" style="position:absolute; left:95.00408243123843%; top:-50%; z-index:10;" src="./img/item12.png">
+        <img class="runItem downplay0" style="position:absolute; left:61.86430733284321%;top:-40%; width:17.417001044801538rem" src="./img/could.png">
+        <img class="runItem downplay3" style="position:absolute; right:90.37585692532403%; top:-20%; z-index:20;" src="./img/item14.png">
+        <img class="runItem downplay0" style="position:absolute; left:23.929366021383814%;top:-40%; width:15.733572594793287rem" src="./img/could.png">
+        <img class="runItem downplay1" style="position:absolute; left:93.92333583924781%; top:-20%; z-index:0;" src="./img/item6.png">
+        <img class="runItem downplay0" style="position:absolute; left:84.08738514476678%;top:-40%; width:14.95737701967119rem" src="./img/could.png">
+        <img class="runItem downplay3" style="position:absolute; right:93.45550670577168%; top:-20%; z-index:20;" src="./img/item5.png">
+        <img class="runItem downplay0" style="position:absolute; left:50.01866404078977%;top:-40%; width:15.050200076178687rem" src="./img/could.png">
+        <img class="runItem downplay2" style="position:absolute; left:90.76825281603483%; top:-20%; z-index:10;" src="./img/item13.png">
+        <img class="runItem downplay0" style="position:absolute; left:-1.1251146072605387%;top:-40%; width:18.635665126226847rem" src="./img/could.png">
+        <img class="runItem downplay1" style="position:absolute; right:94.17714921758476%; top:-20%; z-index:0;" src="./img/item2.png">
+        <img class="runItem downplay0" style="position:absolute; left:86.22759992877236%;top:-40%; width:19.023306380441326rem" src="./img/could.png">
+        <img class="runItem downplay3" style="position:absolute; left:90.20869143610757%; top:-20%; z-index:20;" src="./img/item11.png">
+        <img class="runItem downplay0" style="position:absolute; left:72.779988734681%;top:-40%; width:19.44153434141238rem" src="./img/could.png">
+        <img class="runItem downplay1" style="position:absolute; right:95.21685038494397%; top:-20%; z-index:0;" src="./img/item9.png">
+        <img class="runItem downplay0" style="position:absolute; left:44.35007594367289%;top:-40%; width:16.795508959185852rem" src="./img/could.png">
+        <img class="runItem downplay3" style="position:absolute; left:92.35793668178033%; top:-20%; z-index:20;" src="./img/item14.png">
+
+        <div class="paomabeijing41 okplay">
+            <img class="bgcould1"
+                 src="./img/bgcould.png">
+        </div>
+
+<!--        <div class="countdown_box">-->
+<!--            <div class="yyy3d_title_box">距离结束 <span class="time-down">0</span> 秒</div>-->
+<!--        </div>-->
+        <!--<div class="yyy3d_time_box"><div class="text">参与人数</div><div class="regist-num">0</div></div>-->
+        <div class="tracklist okplay">
+
+
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="trackline"
+                 style="display: block; height: 73.7px; line-height: 153.6px; font-size: 76.8px;"></div>
+            <div class="paomabeijing41">
+                <div  v-for="(item, index) in totalDatas" :key="index" >
+
+                    <div class="player player3"  :style="{marginLeft:(index *150 -50)+'px'}" >
+                        <div class="yyytp"  :style="{height: (Number(item.totalCount) + 3) +'0px'}">
+                            <div class="lunzia car3 okplay"></div>
+                            <img class="lunzic car3"
+                                 :src="'./img/p' +(index%3+1)+'.gif' ">
+                        </div>
+                        <div class="pnctx" :style="{top: -  item.totalCount +'0px'}">
+                            <div class="shake route267"
+                                 :style="{backgroundImage: 'url('+item.avatarUrl+')'}"></div>
+                            <div class="route127">{{item.nickName}}</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            batchNumber: 50,
+            totalDatas:[
+
+                {
+                    'avatarUrl':'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0sT18JZDiakI5ZfhoNsMBiacqQyNlXuty705zuZp9un85HNrS1iajpr6pMEJl6qsmbcdvXeatTMiaNA/132',
+                    'nickName':'～R e ａｎ2',
+                    'totalCount' :'12'
+                },
+                {
+                    'avatarUrl':'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0sT18JZDiakI5ZfhoNsMBiacqQyNlXuty705zuZp9un85HNrS1iajpr6pMEJl6qsmbcdvXeatTMiaNA/132',
+                    'nickName':'张三',
+                    'totalCount' :'24'
+                }
+                ,
+                {
+                    'avatarUrl':'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0sT18JZDiakI5ZfhoNsMBiacqQyNlXuty705zuZp9un85HNrS1iajpr6pMEJl6qsmbcdvXeatTMiaNA/132',
+                    'nickName':'李四',
+                    'totalCount' :'69'
+                }
+            ]
+        },
+
+        computed: {
+
+        },
+        created: function () {
+            this.initWebSocket()
+        },
+        watch:function(){
+
+        },
+        methods: {
+
+            echo: function () {
+                if (!this.msg) return
+                console.log('WebSocket发送消息: ' + this.msg)
+                ws.send(this.msg)
+            },
+            initWebSocket: function (params) {
+                ws = new WebSocket("ws://43.142.121.182:8080/webSocket/erdfhsdyer");
+                // ws = new WebSocket("ws://localhost:8080/webSocket/erdfhsdyer");
+                var tht =this;
+                // var ws = new WebSocket("ws://localhost:8096/websocket/111405");
+                ws.onopen = function (e) {
+                    console.log('WebSocket已经打开: ')
+                    console.log(e)
+                }
+                ws.onmessage = function (e) {
+                    if(e.data.indexOf('nickName') != -1){
+                        tht.totalDatas =  JSON.parse(e.data).totalInfos
+                        // this.totalDatas.push( e.data)
+                    }
+
+                    console.log('WebSocket收到消息: ' + e.data)
+                }
+                ws.onclose = function (e) {
+                    console.log('WebSocket关闭: ')
+                    console.log(e)
+                }
+                ws.onerror = function (e) {
+                    console.log('WebSocket发生错误: ')
+                    console.log(e)
+                }
+            }
+        },
+    })
+</script>
+</body>
+
+</html>

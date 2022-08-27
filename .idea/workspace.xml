@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="25fd3b86-5d1e-45b3-84e1-38ed674289ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="/Library/apache-maven-3.5.4/repository" />
+        <option name="mavenHome" value="/Library/apache-maven-3.5.4" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2DwKfpfnDILrSf2XGxtmKcEggVg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tencent.wxcloudrun.controller" />
+      <recent name="com.tencent.wxcloudrun.config" />
+      <recent name="com.tencent.wxcloudrun.model" />
+      <recent name="com.tencent.wxcloudrun.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WxCloudRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-wxcloudrun" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tencent.wxcloudrun.WxCloudRunApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25fd3b86-5d1e-45b3-84e1-38ed674289ab" name="Default Changelist" comment="" />
+      <created>1661604812667</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661604812667</updated>
+      <workItem from="1661604818492" duration="865000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="87" key="#Project_Structure" timestamp="1661605372290">
+      <screen x="0" y="25" width="1440" height="797" />
+    </state>
+    <state x="320" y="87" key="#Project_Structure/0.25.1440.797@0.25.1440.797" timestamp="1661605372290" />
+    <state width="1398" height="201" key="GridCell.Tab.0.bottom" timestamp="1661605666587">
+      <screen x="0" y="25" width="1440" height="797" />
+    </state>
+    <state width="1398" height="201" key="GridCell.Tab.0.bottom/0.25.1440.797@0.25.1440.797" timestamp="1661605666587" />
+    <state width="1398" height="201" key="GridCell.Tab.0.center" timestamp="1661605666586">
+      <screen x="0" y="25" width="1440" height="797" />
+    </state>
+    <state width="1398" height="201" key="GridCell.Tab.0.center/0.25.1440.797@0.25.1440.797" timestamp="1661605666586" />
+    <state width="1398" height="201" key="GridCell.Tab.0.left" timestamp="1661605666585">
+      <screen x="0" y="25" width="1440" height="797" />
+    </state>
+    <state width="1398" height="201" key="GridCell.Tab.0.left/0.25.1440.797@0.25.1440.797" timestamp="1661605666585" />
+    <state width="1398" height="201" key="GridCell.Tab.0.right" timestamp="1661605666587">
+      <screen x="0" y="25" width="1440" height="797" />
+    </state>
+    <state width="1398" height="201" key="GridCell.Tab.0.right/0.25.1440.797@0.25.1440.797" timestamp="1661605666587" />
+  </component>
+</project>

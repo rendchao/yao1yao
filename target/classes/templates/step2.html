@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>聊天室</title>
+    <script src="./js/jquery-1.12.3.min.js"></script>
+
+	  <link rel="stylesheet" href="./css/style.css" media="screen" type="text/css">
+
+	  <script type="text/javascript" src="./js/jquery.gradientify.min.js"></script>
+
+
+
+
+<style>
+body{
+	margin-top:5px;
+}
+</style>
+</head>
+  <body>
+
+  <h1>jQuery进度条</h1>
+
+  <div class="row clear">
+	  <div class="title">第一名</div>
+	  <div class="background"><div class="progress" data-value='90%' data-color="[{start:[255,250,240],stop:[255,255,0]},{start:[255,255,0],stop:[255,0,0]}]"></div></div>
+	  <div class="num" data-value="40">0分</div>
+  </div>
+  <div class="row clear">
+	  <div class="title">第二名</div>
+	  <div class="background"><div class="progress" data-value='90%' data-color="[{start:[158,217,0],stop:[0,255,0]},{start:[0,255,0],stop:[12,137,24]}]"></div></div>
+	  <div class="num" data-value="85">0分</div>
+  </div>
+  <div class="row clear">
+	  <div class="title">第三名</div>
+	  <div class="background"><div class="progress" data-value='90%' data-color="[{start:[127,255,255],stop:[0,0,255]},{start:[0,0,255],stop:[0,55,114]}]"></div></div>
+	  <div class="num" data-value="70">0分</div>
+  </div>
+  <div class="row clear">
+	  <div class="title">第四名</div>
+	  <div class="background"><div class="progress" data-value='90%' data-color="[{start:[244,198,224],stop:[140,75,187]},{start:[140,75,187],stop:[80,0,80]}]"></div></div>
+	  <div class="num" data-value="50">0分</div>
+  </div>
+  <div class="row clear">
+	  <div class="title">第五名</div>
+	  <div class="background"><div class="progress" data-value='90%' data-color="[{start:[204,204,204],stop:[0,0,0]},{start:[0,0,0],stop:[204,204,204]}]"></div></div>
+	  <div class="num" data-value="90">0分</div>
+  </div>
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $('.row').each(function(){
+
+              $(this).find('.progress').animate({
+                  width:$(this).find('.progress').attr('data-value')
+              },1000).gradientify({
+                  gradients: eval($(this).find('.progress').attr('data-color')),
+                  angle:'45deg',
+                  fps:'300',
+                  transition_time:'1'
+              });
+              var num = $(this).find('.num').attr('data-value');
+              var that = $(this);
+              debugger;
+              setTimeout(function(){setNumTimer(1,num,that)},50);
+          });
+      });
+	  function setNumTimer(i,num,obj){
+		  if(i <= num)
+		  {
+			  obj.find('.num').text(i+"分");
+			  setTimeout(function(){setNumTimer(++i,num,obj)},50);
+		  }
+	  }
+  </script>
+
+
+  </body>
+</html>

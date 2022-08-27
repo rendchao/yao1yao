@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>计步器改造</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="./js/element-ui@2.4.11/lib/theme-chalk/index.css">
+    <script src="js/polyfill.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="./js/element-ui@2.4.11/lib/index.js"></script>
+    <script src="js/member.js"></script>
+    <style>
+
+        * {
+            cursor: initial;
+        }
+
+        .awards,
+        .members {
+            width: 96%;
+            margin: auto;
+            margin-top: 440px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .el-progress-bar__innerText1 {
+            color: #fff;
+            font-size: 12px;
+            margin: -54px 5px;
+        }
+        .el-progress-bar__inner1 {
+            position: absolute;
+            left: 63px;
+            top: 0;
+            height: 100%;
+            text-align: right;
+            border-radius: 100px;
+            line-height: 1;
+            white-space: nowrap;
+            -webkit-transition: width .6s ease;
+            transition: width .6s ease
+        }
+        @-webkit-keyframes rotation{
+            from {-webkit-transform: rotate(-60deg);}
+            to {-webkit-transform: rotate(20deg);}
+        }
+        .n_picture_adm{
+            /*-webkit-transform: rotate(20deg);*/
+            /*animation: rotation 200ms linear infinite;*/
+            /*-moz-animation: rotation 200ms linear infinite;*/
+            /*-webkit-animation: rotation 200ms linear infinite;*/
+            /*-o-animation: rotation 200ms linear infinite;*/
+
+            height: 139px;
+            width: 100px;
+            border-radius: 70%;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body style="background-image: url('./img/bg12.png')">
+<div id="app">
+    <div class="awards">
+        <div class="el-progress-bar__outer" style="height: 61px;margin-bottom: 23px;" v-for="(item, index) in totalDatas" :key="index">
+
+            <div class="el-progress-bar__inner1" :style="{width: (item.totalCount -8) +'%'}">
+
+                <span style="margin-right: -84px;">{{item.totalCount}}</span>
+                <div class="el-progress-bar__innerText1">
+                    <img src="./img/p12.gif" class="n_picture_adm" style=" border-radius: 70%;">
+
+
+                    <img style=" margin-left: 18px;height: 43px; width: 44px; margin-bottom: 48px;border-radius: 70%;" :src="item.avatarUrl"/>
+                </div>
+            </div>
+
+<!--            <div class="el-progress-bar__inner" :style="{width: (item.totalCount -8) +'%'}"   >-->
+
+<!--                <span style="margin-right: -84px;">{{item.totalCount}}</span>-->
+<!--                <div class="el-progress-bar__innerText">-->
+<!--                    <img src="./img/running.png" style="height: 35px; width: 35px; border-radius: 70%;">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="el-progress-bar_left" >-->
+<!--                <span >-->
+<!--                    <img style="margin-left: 18px;height: 43px; width: 44px; margin-bottom: 48px;border-radius: 70%;" :src="item.avatarUrl"/>-->
+<!--                </span>-->
+
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            batchNumber: 50,
+            totalDatas:[
+
+                {
+                    'avatarUrl':'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0sT18JZDiakI5ZfhoNsMBiacqQyNlXuty705zuZp9un85HNrS1iajpr6pMEJl6qsmbcdvXeatTMiaNA/132',
+                    'nickName':'～R e ａｎ2',
+                    'totalCount' :'12'
+                },
+                {
+                    'avatarUrl':'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0sT18JZDiakI5ZfhoNsMBiacqQyNlXuty705zuZp9un85HNrS1iajpr6pMEJl6qsmbcdvXeatTMiaNA/132',
+                    'nickName':'张三',
+                    'totalCount' :'24'
+                }
+                ,
+                {
+                    'avatarUrl':'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0sT18JZDiakI5ZfhoNsMBiacqQyNlXuty705zuZp9un85HNrS1iajpr6pMEJl6qsmbcdvXeatTMiaNA/132',
+                    'nickName':'李四',
+                    'totalCount' :'69'
+                }
+            ]
+        },
+
+        computed: {
+
+        },
+        created: function () {
+            this.initWebSocket()
+        },
+        watch:function(){
+
+        },
+        methods: {
+
+            echo: function () {
+                if (!this.msg) return
+                console.log('WebSocket发送消息: ' + this.msg)
+                ws.send(this.msg)
+            },
+            initWebSocket: function (params) {
+                ws = new WebSocket("ws://localhost:8080/webSocket/erdfhsdyer");
+                var tht =this;
+                // var ws = new WebSocket("ws://localhost:8096/websocket/111405");
+                ws.onopen = function (e) {
+                    console.log('WebSocket已经打开: ')
+                    console.log(e)
+                }
+                ws.onmessage = function (e) {
+                    if(e.data.indexOf('nickName') != -1){
+                        tht.totalDatas =  JSON.parse(e.data).totalInfos
+                        // this.totalDatas.push( e.data)
+                    }
+
+                    console.log('WebSocket收到消息: ' + e.data)
+                }
+                ws.onclose = function (e) {
+                    console.log('WebSocket关闭: ')
+                    console.log(e)
+                }
+                ws.onerror = function (e) {
+                    console.log('WebSocket发生错误: ')
+                    console.log(e)
+                }
+            }
+        },
+    })
+</script>
+</body>
+
+</html>
